@@ -36,10 +36,11 @@
           max-width: 500px;
           @include d-flex(column, flex-start, flex-start, nowrap, 32px);
           .wrapper {
+            border-bottom: 1px solid #c4c4c4;
+            padding-bottom: 17px;
             @include d-flex(row, flex-start, space-between, nowrap);
             .left {
               width: 100%;
-              max-width: 387px;
               height: auto;
               font-family: var(--font-opensans);
               font-size: 20px;
@@ -56,12 +57,6 @@
                 font-size: 15px;
                 line-height: 25px;
                 margin-bottom: 16px;
-                .line {
-                  width: 100%;
-                  max-width: 500px;
-                  height: 1px;
-                  color: #c4c4c4;
-                }
               }
             }
             .right {
