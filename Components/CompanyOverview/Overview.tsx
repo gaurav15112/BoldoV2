@@ -4,12 +4,34 @@ import style from "./Overview.module.scss";
 import officeview from "../../assets/Images/Image.svg";
 import Image from "next/image";
 import arrowdown from "../../assets/Images/chevron-down.svg";
-const Overview = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
+const FaqItem = [
+  {
+    id: 1,
+    question: "We connect our customers with the best?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing",
+  },
+  {
+    id: 2,
+    question: "Android research & development rockstar?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing",
+  },
+];
+interface FaqItem {
+  id: number;
+  question: string;
+}
+interface OverviewProps {
+  data: FaqItem;
+}
+const Overview: React.FC<OverviewProps> = ({ data }) => {
+  console.log(data);
+  const [openAccordian, setOpenAccordian] = useState(null);
+  const handleAccordian = (id: any) => {
+    setOpenAccordian(id === openAccordian ? null : id);
   };
+
   return (
     <>
       <section className={`${style.overview}`}>
@@ -25,28 +47,25 @@ const Overview = () => {
               </p>
             </div>
             <div className="faq-section__faq">
-              {[1, 2].map((card, index) => (
+              {FaqItem.map((item, index) => (
                 <div className="wrapper" key={index}>
                   <div className="left">
-                    <p className="question">
+                    <p className="question" key={item.question}>
                       We connect our customers with the best?
                     </p>
-                    {isOpen && (
+                    {openAccordian === item.id && (
                       <div className="answr">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Lorem ipsum dolor, sit amet consectetur
-                          adipisicing elit. Quia, magnam odit. Temporibus
-                          quisquam explicabo alias,
-                        </p>
+                        <p>{item.answer}</p>
                       </div>
                     )}
                   </div>
                   <div
-                    className={`${!isOpen ? "right" : "arrowup"}`}
-                    onClick={handleClick}
+                    className={`${
+                      openAccordian !== item.id ? "right" : "arrowup"
+                    }`}
+                    onClick={() => handleAccordian(item.id)}
                   >
-                    <Image src={arrowdown} alt="arrowdown" />
+                    <Image key={item.id} src={arrowdown} alt="arrowdown" />
                   </div>
                 </div>
               ))}
