@@ -1,0 +1,54 @@
+// @import './Particles/resets';
+@import "./Particles/typography";
+@import "./Particles/media";
+@import "./Particles/grid";
+@import "./Particles/variables";
+@import "./Particles/button";
+@import "./Particles/font";
+// COMMON CLASSES
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+
+.container-fluid {
+  width: 100%;
+  // max-width: 1440px;
+  padding-block: 2px;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.primary__btn {
+  @include button($primary-color, darken($white, 5%), 0.7rem 1.5rem, 0, 10px);
+  font-size: $fs-xxxl - 4;
+  line-height: $fs-jumbo + 1;
+  transition: all 0.3s;
+  width: max-content;
+  outline: none;
+  font-family: inherit;
+
+  &:hover {
+    background-color: lighten($primary-color, 3%);
+  }
+}
+
+.primary__desc {
+  font-size: $fs-xxl - 2;
+  line-height: $fs-xxxl;
+}
+
+.primary__heading {
+  font-size: $fs-jumbo + 25;
+  line-height: $fs-jumbo + 35;
+  font-weight: $fw-bold + 100;
+}
+
+.secondary__heading {
+  font-size: $fs-jumbo + 15;
+  line-height: $fs-jumbo + 25;
+  font-weight: $fw-bold + 100;
+}

@@ -1,0 +1,26 @@
+@import "../../assets/scss/sass-loader.scss";
+.button {
+  border-radius: 24px;
+  border: 2px solid $dark-blue;
+  padding: 8px 40px;
+  cursor: pointer;
+  min-width: 128px;
+  min-height: 50px;
+
+  span {
+    font-family: var(--font-opensans);
+    font-size: $fs-md;
+    font-weight: 700;
+    line-height: 24px;
+    background-color: transparent;
+  }
+  @media (max-width: 768px) {
+    padding: 11px 19px !important;
+  }
+
+  &--transparent {
+    border: 2px solid chocolate;
+  }
+  &--primary {
+  }
+}

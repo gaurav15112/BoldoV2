@@ -1,0 +1,172 @@
+@import "../../assets//scss/sass-loader.scss";
+
+.testimonial {
+  background-color: $dark-blue;
+  padding: 96px 0px;
+  :global .testimonial {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 72px;
+      position: relative;
+      .heading {
+        h2 {
+          max-width: 716px;
+          font-size: 48px;
+          font-weight: 400;
+          font-family: var(--font-manrope);
+          line-height: 150%;
+          color: $white;
+        }
+      }
+      .wrapper {
+        position: absolute;
+        display: flex;
+        gap: 28px;
+        position: absolute;
+        right: 5%;
+        top: 15%;
+        .arrow {
+          width: 72px;
+          height: 72px;
+          border-radius: 50%;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &--left {
+          }
+
+          &--right {
+          }
+        }
+      }
+
+      .Slider {
+        .cards-wrapper {
+          max-width: 350px;
+          padding: 40px;
+          border-radius: 12px;
+          background-color: $white;
+          box-shadow: 0px 12px 32px 0px #0000001f;
+          margin-right: 2rem;
+          &__card {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            .quote {
+              font-family: var(--font-opensans);
+              font-size: 24px;
+              font-weight: 400;
+              line-height: 150%;
+              text-align: left;
+              color: $black;
+            }
+            .about {
+              display: flex;
+              gap: 16px;
+              &__img-cont {
+                max-width: 58px;
+                height: auto;
+                img {
+                  width: 100%;
+                  object-fit: cover;
+                }
+              }
+              &__position {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                .name {
+                  font-family: var(--font-opensans);
+                  font-size: 16px;
+                  font-weight: 700;
+                  line-height: 32px;
+                  text-align: left;
+                  color: $dark-blue;
+                }
+                .post {
+                  font-family: var(--font-opensans);
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 32px;
+                  text-align: left;
+                  color: $dark-blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 1rem 0px;
+    :global .testimonial {
+      &__container {
+        gap: 35px;
+        .heading {
+          h2 {
+            font-size: 28px;
+          }
+        }
+        .Slider {
+          .cards-wrapper {
+            margin-right: 20px;
+            padding: 20px;
+            &__card {
+              gap: 18px;
+              .quote {
+                font-size: 18px;
+              }
+              .about {
+                &__position {
+                  gap: 6px;
+                  .name {
+                    font-size: 13px;
+                    line-height: 23px;
+                  }
+                  .post {
+                    font-size: 13px;
+                    line-height: 25px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .wrapper {
+          display: none;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 1rem 0;
+    :global .testimonial {
+      &__container {
+        .Slider {
+          .cards-wrapper {
+            margin-right: 20px;
+            padding: 20px;
+            &__card {
+              gap: 18px;
+              .quote {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        .wrapper {
+          right: 5%;
+          top: 32%;
+          gap: 20px;
+          .arrow {
+            width: 68px;
+            height: 68px;
+          }
+        }
+      }
+    }
+  }
+}

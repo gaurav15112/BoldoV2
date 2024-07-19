@@ -1,0 +1,46 @@
+<svg width="193" height="166" viewBox="0 0 193 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="193" height="166" fill="#DEDEDE"/>
+<g id="Homepage" clip-path="url(#clip0_0_1)">
+<rect width="1400" height="7054" transform="translate(-807 -419)" fill="white"/>
+<rect id="Rectangle 1267" x="-807" y="-419" width="1400" height="798" fill="#0A2640"/>
+<circle id="Ellipse 9" cx="616.5" cy="-561.5" r="646.5" fill="#1C3D5B"/>
+<g id="Frame 284">
+<g id="hero graphics" clip-path="url(#clip1_0_1)">
+<g id="Rectangle 1289" filter="url(#filter0_b_0_1)">
+<rect x="0.21582" y="0.665039" width="192.175" height="165.335" rx="15.0305" fill="white" fill-opacity="0.18"/>
+</g>
+<g id="Group 263">
+<g id="Group 255">
+<ellipse id="Ellipse 6" cx="21.1133" cy="18.6006" rx="4.71999" ry="4.75784" fill="#FC5B00"/>
+<ellipse id="Ellipse 7" cx="39.9934" cy="18.6006" rx="4.71999" ry="4.75784" fill="#ECAA00"/>
+<ellipse id="Ellipse 8" cx="58.8733" cy="18.6006" rx="4.71999" ry="4.75784" fill="#009D10"/>
+</g>
+</g>
+<g id="Group 208">
+<rect id="Rectangle 1275" width="9.30457" height="23.2668" rx="4.65228" transform="matrix(1 0 0 -1 24.9087 145.528)" fill="#0DBBFC"/>
+<rect id="Rectangle 1276" width="9.30457" height="13.4841" rx="4.65228" transform="matrix(1 0 0 -1 43.5178 135.745)" fill="#0DBBFC"/>
+<rect id="Rectangle 1277" x="62.127" y="59.864" width="9.30457" height="62.3972" rx="4.65228" fill="#0DBBFC"/>
+<rect id="Rectangle 1278" x="80.7361" y="79.1648" width="9.30457" height="43.0964" rx="4.65229" fill="#0DBBFC"/>
+<rect id="Rectangle 1279" x="99.3452" y="39.2412" width="9.30457" height="83.02" rx="4.65229" fill="#95ABBC"/>
+<rect id="Rectangle 1280" x="117.954" y="63.5654" width="9.30457" height="58.6957" rx="4.65229" fill="#0DBBFC"/>
+<rect id="Rectangle 1281" x="136.563" y="52.1965" width="9.30456" height="70.0647" rx="4.65228" fill="#0DBBFC"/>
+<rect id="Rectangle 1282" x="155.173" y="90.2695" width="9.30456" height="31.9918" rx="4.65228" fill="#0DBBFC"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_b_0_1" x="-68.4948" y="-68.0456" width="329.596" height="302.756" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="34.3553"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_0_1"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_0_1" result="shape"/>
+</filter>
+<clipPath id="clip0_0_1">
+<rect width="1400" height="7054" fill="white" transform="translate(-807 -419)"/>
+</clipPath>
+<clipPath id="clip1_0_1">
+<rect width="493.858" height="423" fill="white" transform="translate(-0.85791 -257)"/>
+</clipPath>
+</defs>
+</svg>

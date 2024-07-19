@@ -1,0 +1,157 @@
+@import "../../assets/scss/sass-loader.scss";
+
+.hero {
+  background-color: $dark-blue;
+  :global .hero {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+      margin: 0 auto;
+      .header {
+      }
+      .wrapper {
+        width: 100%;
+        max-width: 1200px;
+
+        @include d-flex(row, flex-start, space-between, nowrap, 20px);
+        &__left {
+          width: 100%;
+          max-width: 567px;
+          margin: 56px 0;
+          @include d-flex(column, flex-start, flex-start, nowrap, 40px);
+          .content {
+            &__title {
+              font-family: var(--font-manrope);
+              font-size: 48px;
+              font-weight: 400;
+              line-height: 72px;
+              text-align: left;
+              color: $white;
+            }
+            &__description {
+              font-family: var(--font-opensans);
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 28px;
+              text-align: left;
+              color: #f1f1f1;
+            }
+          }
+          .butns {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            // @include d-flex(row, flex-start, flex-start, nowrap, 24px);
+          }
+        }
+        &__right {
+          display: flex;
+          flex-direction: column;
+          gap: 26px;
+          .images-div {
+            width: 100%;
+            max-width: 494px;
+            img {
+              width: 100%;
+            }
+          }
+
+          .images-div2 {
+            display: flex;
+            flex-direction: row;
+            gap: 39px;
+            .img1 {
+              width: 100%;
+              max-width: 192px;
+              img {
+                width: 100%;
+              }
+            }
+            .img2 {
+              width: 100%;
+              max-width: 261px;
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      .slider {
+        position: relative;
+        width: 100%;
+        max-width: 1173px;
+        margin: 0 auto;
+      }
+      // .slider::before,
+      // .slider::after {
+      //   content: "ddd";
+      //   height: 10px;
+      //   width: 50px;
+      //   top: 50px;
+      //   position: absolute;
+      //   left: 0px;
+      //   background: linear-gradient(
+      //     90deg,
+      //     #0a2640 0%,
+      //     rgba(10, 38, 64, 0.109375) 31.6%,
+      //     rgba(10, 38, 64, 0) 72.89%,
+      //     #0a2640 97.87%
+      //   );
+      // }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    :global .hero {
+      &__container {
+        @include d-flex(0px);
+        .wrapper {
+          @include d-flex(column, center, center);
+          &__left {
+            margin: 10px 0px;
+            .butns {
+              @include d-flex(column, center, center);
+            }
+            .content {
+              &__title {
+                font-size: 31px;
+                line-height: 43px;
+              }
+              &__description {
+                font-size: 16px;
+                line-height: 26px;
+              }
+            }
+            .butns {
+              gap: 9px;
+            }
+          }
+          &__right {
+            .images-div {
+              padding: 1rem;
+              img {
+                width: 100%;
+                object-fit: cover;
+                height: auto;
+              }
+            }
+            .images-div2 {
+              padding: 1rem;
+              flex-direction: row;
+              align-items: center;
+              gap: 19px;
+              img {
+                width: 100%;
+                object-fit: cover;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

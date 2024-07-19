@@ -1,0 +1,7 @@
+@import "../assets/scss/sass-loader.scss";
+.page {
+  :global .page {
+    &__container {
+    }
+  }
+}

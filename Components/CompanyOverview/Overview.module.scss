@@ -1,0 +1,131 @@
+@import "../.././assets/scss/sass-loader.scss";
+.overview {
+  :global .overview {
+    &__container {
+      @include d-flex(column, flex-start, flex-start, nowrap, 24px);
+      margin-top: 126px;
+      margin-bottom: 158px;
+      .image-section {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        border-radius: 24px;
+        img {
+          width: 100%;
+          object-fit: cover;
+          display: block;
+        }
+      }
+      .faq-section {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        @include d-flex(row, flex-start, flex-start, nowrap, 100px);
+        &__txt {
+          font-family: var(--font-opensans);
+          font-size: 36px;
+          font-weight: 400;
+          line-height: 56px;
+          text-align: left;
+          width: 100%;
+          max-width: 500px;
+          height: max-content;
+        }
+        &__faq {
+          width: 100%;
+          max-width: 500px;
+          @include d-flex(column, flex-start, flex-start, nowrap, 32px);
+          .wrapper {
+            @include d-flex(row, flex-start, space-between, nowrap);
+            .left {
+              width: 100%;
+              max-width: 387px;
+              height: auto;
+              font-family: var(--font-opensans);
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 32px;
+              text-align: left;
+              columns: $black;
+              .question {
+              }
+              .answr {
+                width: 100%;
+                max-width: max-content;
+                transition: transform 0.3s;
+                font-size: 15px;
+                line-height: 25px;
+                margin-bottom: 16px;
+                .line {
+                  width: 100%;
+                  max-width: 500px;
+                  height: 1px;
+                  color: #c4c4c4;
+                }
+              }
+            }
+            .right {
+              background-color: $dark-blue;
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              transition: transform 0.3s;
+              @include d-flex(row, center, center, nowrap);
+              img {
+                width: 100%;
+                object-fit: contain;
+              }
+            }
+            .arrowup {
+              background-color: $dark-blue;
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              transition: transform 0.3s;
+
+              @include d-flex(row, center, center, nowrap);
+              & img {
+                width: 100%;
+                object-fit: contain;
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    :global .overview {
+      &__container {
+        padding-top: 16px;
+        margin-bottom: 20px;
+        .faq-section {
+          @include d-flex(column);
+          gap: 40px;
+          &__txt {
+            font-size: 25px;
+            line-height: 37px;
+            max-width: none;
+          }
+          &__faq {
+            max-width: none;
+            .wrapper {
+              gap: 8px;
+              align-items: baseline;
+              .left {
+                max-width: none;
+                .answr {
+                  max-width: none;
+                  .line {
+                    max-width: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

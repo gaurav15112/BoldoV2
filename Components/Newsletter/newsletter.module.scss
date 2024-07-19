@@ -1,0 +1,123 @@
+@import "../../assets/scss/sass-loader.scss";
+@import "../.././styles/variables";
+
+.nletter {
+  :global .nletter {
+    &__container {
+      background-color: $dark-blue;
+      margin-bottom: 84px;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      padding: 72px 0px;
+      .firstdiv {
+        width: 100%;
+        max-width: 716px;
+        font-family: var(--font-manrope);
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 72px;
+        color: $white;
+        text-align: center;
+      }
+      .sdiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        .email {
+          input[type="text"] {
+            width: 100%;
+            max-width: 370px;
+            min-height: 56px;
+            border-radius: 240px;
+            border-radius: 2px solid $white;
+            padding: 12px 152px 12px 32px;
+            cursor: pointer;
+            outline: none;
+            border: none;
+
+            &::placeholder {
+              font-family: var(--font-opensans);
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 32px;
+              color: #000000;
+            }
+          }
+        }
+      }
+
+      .button {
+        border-radius: 56px;
+        border: 2px solid $green;
+        padding: 16px 56px 16px 56px;
+        background: $green;
+        cursor: pointer;
+        span {
+          font-family: var(--font-opensans);
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 28px;
+          color: $dark-blue;
+        }
+      }
+    }
+    @media screen and (max-width: 767px) {
+      &__container {
+        margin-bottom: 20px;
+      }
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 29px;
+        padding: 46px 0px;
+        .firstdiv {
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 25px;
+        }
+        .sdiv {
+          display: flex;
+          flex-direction: row;
+          gap: 24px;
+
+          .email {
+            input[type="text"] {
+              padding: 15px 17px;
+              min-height: 40px;
+
+              &::placeholder {
+                font-size: 18px;
+                line-height: 28px;
+                text-align: left;
+              }
+            }
+          }
+          .button {
+            padding: 0.6rem 0.8rem;
+
+            span {
+              font-size: 14px;
+
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 420px) {
+      &__wrapper {
+        .sdiv {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
