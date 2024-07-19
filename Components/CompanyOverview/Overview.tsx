@@ -25,7 +25,7 @@ const Overview = () => {
               </p>
             </div>
             <div className="faq-section__faq">
-              {[1].map((card, index) => (
+              {[1, 2].map((card, index) => (
                 <div className="wrapper" key={index}>
                   <div className="left">
                     <p className="question">
@@ -39,8 +39,6 @@ const Overview = () => {
                           adipisicing elit. Quia, magnam odit. Temporibus
                           quisquam explicabo alias,
                         </p>
-
-                        <hr className="line"></hr>
                       </div>
                     )}
                   </div>
