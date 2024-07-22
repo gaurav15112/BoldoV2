@@ -20,10 +20,10 @@ const Hero = () => {
   const settings = {
     slidesPerView: 6,
     loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
     breakpoints: {
       320: {
         slidesPerView: 2,
@@ -44,6 +44,27 @@ const Hero = () => {
     },
     modules: [Autoplay, Navigation],
   };
+
+  const data = [
+    {
+      image: boldo,
+    },
+    {
+      image: pres,
+    },
+    {
+      image: boldo,
+    },
+    {
+      image: pres,
+    },
+    {
+      image: boldo,
+    },
+    {
+      image: pres,
+    },
+  ];
 
   return (
     <>
@@ -94,35 +115,19 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="slider">
+          <div className="slider linear">
             <Swiper {...settings}>
-              <SwiperSlide>
-                <Image className="gradient" src={boldo} alt="logo" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image src={pres} alt="logo" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image src={boldo} alt="logo" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image src={pres} alt="logo" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image src={boldo} alt="logo" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image src={pres} alt="logo" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image src={boldo} alt="logo" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image src={pres} alt="logo" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image src={boldo} alt="logo" />
-              </SwiperSlide>
+              {data.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    className="gradient"
+                    src={item?.image}
+                    width={100}
+                    height={220}
+                    alt="logo"
+                  />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>

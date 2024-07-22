@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import footerstyle from "./footer.module.scss";
 import logo from "../../assets/Images/Logo1.svg";
 import Image from "next/image";
 import { title } from "process";
 import { link } from "fs";
+import Link from "next/link";
 // interface footerData<Array>
 //   {
 //     id: string;

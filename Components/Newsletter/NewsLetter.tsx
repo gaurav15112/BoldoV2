@@ -1,7 +1,15 @@
 import React from "react";
 import style from "./newsletter.module.scss";
+interface IProps {
+  name: String;
+  lastname: String;
+  age?: Number;
+  gmail: String;
+  account: Number;
+  hello(a: string): void;
+}
 
-const NewsLetter = () => {
+const NewsLetter: React.FC<IProps> = ({ name, lastname, age, gmail }) => {
   return (
     <>
       <div className={`${style.nletter}`}>

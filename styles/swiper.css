@@ -1,4 +1,5 @@
 .swiper {
+  /* border: 1px solid red; */
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
@@ -6,6 +7,7 @@
 }
 
 .swiper-slide {
+  /* border: 1px solid gold; */
   text-align: center;
   font-size: 18px;
   background: #0a2640;
@@ -36,6 +38,7 @@
 .swiper-slide:nth-child(3n) {
   width: 40%;
 }
+
 @media (max-width: 320px) {
   .swiper-slide img {
     max-width: 120px;

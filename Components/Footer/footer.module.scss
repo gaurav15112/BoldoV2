@@ -12,6 +12,14 @@
       flex-direction: column;
       gap: 40px;
       &__logo {
+        overflow: hidden;
+        &:hover {
+          transform: scale(1.1); // Scale the logo
+          opacity: 0.8; // Change the opacity
+
+          // Uncomment for rotation effect
+          // transform: rotate(5deg);
+        }
       }
       &__descr {
         font-family: var(--font-opensans);
@@ -52,32 +60,34 @@
             cursor: pointer;
 
             li {
-              position: relative;
               font-family: var(--font-opensans);
               font-size: 20px;
               font-weight: 400;
               line-height: 32px;
               color: #777777;
               margin-bottom: 30px;
+              &:hover {
+                color: $green;
+              }
             }
-            .hiring::after {
-              content: "Hiring!";
-              margin-left: 10px;
+          }
+          .hiring::after {
+            content: "Hiring!";
+            margin-left: 10px;
 
-              width: 41px;
-              position: absolute;
-              bottom: -3px;
-              height: 30px;
-              border-radius: 120px;
-              padding: 1px 14px;
-              background-color: $green;
-              font-family: var(--font-opensans);
-              font-size: 13px;
-              font-weight: 700;
-              line-height: 28px;
+            width: 41px;
+            position: absolute;
 
-              color: $dark-blue;
-            }
+            height: 30px;
+            border-radius: 120px;
+            padding: 1px 14px;
+            background-color: $green;
+            font-family: var(--font-opensans);
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 28px;
+
+            color: $dark-blue;
           }
         }
       }

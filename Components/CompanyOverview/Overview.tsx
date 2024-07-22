@@ -26,7 +26,6 @@ interface OverviewProps {
   data: FaqItem;
 }
 const Overview: React.FC<OverviewProps> = ({ data }) => {
-  console.log(data);
   const [openAccordian, setOpenAccordian] = useState(null);
   const handleAccordian = (id: any) => {
     setOpenAccordian(id === openAccordian ? null : id);

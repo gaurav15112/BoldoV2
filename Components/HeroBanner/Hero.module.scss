@@ -64,6 +64,7 @@
             .img1 {
               width: 100%;
               max-width: 192px;
+
               img {
                 width: 100%;
               }
@@ -83,6 +84,38 @@
         width: 100%;
         max-width: 1173px;
         margin: 0 auto;
+
+        &::after {
+          content: "";
+          width: 20px;
+          height: auto;
+          background: linear-gradient(
+            90deg,
+            #0a2640 0%,
+            rgba(10, 38, 64, 0.109375) 31.6%,
+            rgba(10, 38, 64, 0) 72.89%,
+            #0a2640 97.87%
+          );
+
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        &::before {
+          content: "";
+          background: linear-gradient(
+            90deg,
+            #0a2640 0%,
+            rgba(10, 38, 64, 0.109375) 31.6%,
+            rgba(10, 38, 64, 0) 72.89%,
+            #0a2640 97.87%
+          );
+
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
       }
       // .slider::before,
       // .slider::after {
